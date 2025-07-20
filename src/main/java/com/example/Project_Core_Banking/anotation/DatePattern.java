@@ -1,8 +1,8 @@
-package vn.hdbank.delegation.anotation;
+package com.example.Project_Core_Banking.anotation;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
-import vn.hdbank.delegation.anotation.impl.DatePatternImpl;
+import com.example.Project_Core_Banking.anotation.impl.DatePatternImpl;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;

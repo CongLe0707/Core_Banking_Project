@@ -1,1 +1,41 @@
-spring.application.name=Project_Core_Banking
+server:
+  port: ${SERVER_PORT:9000}
+
+spring:
+  profiles:
+    active: ${PROFILES_ACTIVE:uat}
+  application:
+    name: cd-job-dang-ky
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_DATABASE_URL:localhost}:5432/${POSTGRES_DATABASE_NAME:core_banking}
+    username: ${POSTGRES_DATABASE_USERNAME:postgres}
+    password: ${POSTGRES_DATABASE_PASSWORD:12345}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      auto-commit: true
+      connection-timeout: 30000
+      maximum-pool-size: 5
+      minimum-idle: 1
+  jpa:
+    hibernate:
+      ddl-auto: none
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      show-sql: false
+      format-sql: false
+    properties:
+      hibernate.default_schema: core_banking
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+    prometheus:
+      metrics:
+        export:
+          enabled: true

@@ -1,10 +1,10 @@
-package vn.hdbank.delegation.anotation.impl;
+package com.example.Project_Core_Banking.anotation.impl;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.validator.constraintvalidation.HibernateConstraintValidatorContext;
-import vn.hdbank.delegation.anotation.EnumPattern;
+import com.example.Project_Core_Banking.anotation.EnumPattern;
 
 import java.util.List;
 import java.util.stream.Collectors;

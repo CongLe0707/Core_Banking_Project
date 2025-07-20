@@ -1,8 +1,8 @@
-package vn.hdbank.delegation.anotation.impl;
+package com.example.Project_Core_Banking.anotation.impl;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
-import vn.hdbank.delegation.anotation.DatePattern;
+import com.example.Project_Core_Banking.anotation.DatePattern;
 
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;

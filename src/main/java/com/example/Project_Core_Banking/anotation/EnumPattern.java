@@ -1,8 +1,8 @@
-package vn.hdbank.delegation.anotation;
+package com.example.Project_Core_Banking.anotation;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
-import vn.hdbank.delegation.anotation.impl.EnumPatternImpl;
+import  com.example.Project_Core_Banking.anotation.impl.EnumPatternImpl;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;

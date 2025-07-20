@@ -1,9 +1,9 @@
-package vn.hdbank.delegation.anotation.impl;
+package com.example.Project_Core_Banking.anotation.impl;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import org.apache.commons.lang3.StringUtils;
-import vn.hdbank.delegation.anotation.PhoneNumber;
+import com.example.Project_Core_Banking.anotation.PhoneNumber;
 
 public class PhoneNumberImpl implements ConstraintValidator<PhoneNumber, String> {
     private boolean isRequired;
