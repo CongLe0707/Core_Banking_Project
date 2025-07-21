@@ -25,6 +25,7 @@ spring:
     properties:
       hibernate.default_schema: core_banking
 
+
 management:
   endpoints:
     web:

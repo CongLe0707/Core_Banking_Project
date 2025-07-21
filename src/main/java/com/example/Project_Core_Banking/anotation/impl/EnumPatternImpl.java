@@ -31,7 +31,6 @@ public class EnumPatternImpl implements ConstraintValidator<EnumPattern, CharSeq
         if (isRequired) {
             return StringUtils.isNotBlank(value) && acceptedValues.contains(value.toString());
         }
-
         return acceptedValues.isEmpty() || value == null || acceptedValues.contains(value.toString());
     }
 }

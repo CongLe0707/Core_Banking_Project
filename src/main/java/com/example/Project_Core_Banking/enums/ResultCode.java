@@ -11,6 +11,7 @@ public enum ResultCode implements IResultCode {
     INVALID_JSON_FORMAT("ERR01", "Json không đúng định dạng"),
     INTERNAL_SERVER_ERROR("6000","System error"),
     VALIDATION_ERROR("1002", "Validation Error"),
+    CLIENT_NOT_FOUND("ERR02", "%s Đã được đăng kí")
 
     ;
 
