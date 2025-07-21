@@ -1,4 +1,4 @@
-package vn.hdbank.delegation.utils;
+package com.example.Project_Core_Banking.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

@@ -1,4 +1,4 @@
-package vn.hdbank.delegation.utils;
+package com.example.Project_Core_Banking.utils;
 
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
