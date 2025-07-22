@@ -11,9 +11,10 @@ public enum ResultCode implements IResultCode {
     INVALID_JSON_FORMAT("ERR01", "Json không đúng định dạng"),
     INTERNAL_SERVER_ERROR("6000","System error"),
     VALIDATION_ERROR("1002", "Validation Error"),
-    CLIENT_NOT_FOUND("ERR02", "%s Đã tồn tại"),
+    CLIENT_NOT_FOUND("ERR02", " Đã tồn tại %s"),
 
-    CLIENT_NOT_FOUND_1("ERR03","Không tìm thấy %s" );
+    CLIENT_NOT_FOUND_1("ERR03","Không tìm thấy %s" ),
+    ID_CARD("ERR04","CCCD đã được sử dụng");
 
     private String code;
     private String message;

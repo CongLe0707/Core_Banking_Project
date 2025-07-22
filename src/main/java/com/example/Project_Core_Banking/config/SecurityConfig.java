@@ -28,7 +28,7 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/login/v1","/create/v1").permitAll()
-                        .requestMatchers("/ss").hasAuthority("UQ")
+                        .requestMatchers("/card/v1").hasAuthority("UQ")
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(ex -> ex
