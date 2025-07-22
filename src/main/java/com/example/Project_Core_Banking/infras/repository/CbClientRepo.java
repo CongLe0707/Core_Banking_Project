@@ -8,5 +8,4 @@ import java.util.UUID;
 
 public interface CbClientRepo extends JpaRepository<CbClient, UUID> {
     Optional<CbClient> findByClientNo(String clientNo);
-
 }
