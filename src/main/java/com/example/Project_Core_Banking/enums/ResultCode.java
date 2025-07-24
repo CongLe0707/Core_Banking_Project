@@ -20,7 +20,9 @@ public enum ResultCode implements IResultCode {
     MIN_AMOUNT("ERR07","Số tiền rút không dược bé hơn 100k" ),
     DEPO_AMOUNT("ERR08","Số tiền bạn rút không được vượt quá số tiền trong tài khoản"),
     ZERO_AMOUNT("ERR09","Số tiền không đủ" ),
-    CHECK_PASS_CARD("ERR10", "Bạn nhập sai pass" );
+    CHECK_PASS_CARD("ERR10", "Bạn nhập sai pass" ) ,
+    NO_CLIENT_ID("ERR12", "Bạn nhập sai thông tin"),
+    NOT_NULL("ERR11","Không được để trống");
 
     private String code;
     private String message;
