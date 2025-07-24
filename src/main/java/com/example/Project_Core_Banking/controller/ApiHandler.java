@@ -1,6 +1,7 @@
 package com.example.Project_Core_Banking.controller;
 
 import com.example.Project_Core_Banking.dto.request.CommonReq;
+import com.example.Project_Core_Banking.dto.request.UpdatePassCardReq;
 import com.example.Project_Core_Banking.dto.response.CommonRes;
 import com.example.Project_Core_Banking.utils.Utils;
 import lombok.experimental.UtilityClass;
@@ -31,6 +32,7 @@ public class ApiHandler {
         log.info("Error response: {}", Utils.object2Json(commonRes));
         return ResponseEntity.ok(commonRes);
     }
+
 
 
 }

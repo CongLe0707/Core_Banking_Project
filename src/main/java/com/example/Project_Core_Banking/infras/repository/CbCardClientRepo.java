@@ -9,5 +9,7 @@ import java.util.UUID;
 public interface CbCardClientRepo extends JpaRepository<CbCardClient, UUID> {
     Optional<CbCardClient> findByClientNo(String clientNo);
 
+    Optional<CbCardClient> findByPassCard(String passCard);
+
     Optional<Object> findByIdCard(String IdCard);
 }
