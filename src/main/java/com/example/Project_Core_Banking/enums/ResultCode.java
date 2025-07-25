@@ -22,7 +22,8 @@ public enum ResultCode implements IResultCode {
     ZERO_AMOUNT("ERR09","Số tiền không đủ" ),
     CHECK_PASS_CARD("ERR10", "Bạn nhập sai pass" ) ,
     NO_CLIENT_ID("ERR12", "Bạn nhập sai thông tin"),
-    NOT_NULL("ERR11","Không được để trống");
+    NOT_NULL("ERR11","Không được để trống"),
+    ACCOUNT_ALREADY_REGISTERED("ERR13","Tài khoản %s đã được ghi nhận");
 
     private String code;
     private String message;

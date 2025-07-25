@@ -2,7 +2,6 @@ package com.example.Project_Core_Banking.service.impl;
 
 import com.example.Project_Core_Banking.dto.request.CommonReq;
 import com.example.Project_Core_Banking.dto.request.CreateClientReq;
-import com.example.Project_Core_Banking.dto.response.CommonRes;
 import com.example.Project_Core_Banking.dto.response.CreateClientRes;
 import com.example.Project_Core_Banking.entity.CbClient;
 import com.example.Project_Core_Banking.enums.ResultCode;
@@ -14,9 +13,9 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.OffsetDateTime;
+
 import java.util.Optional;
-import java.util.UUID;
+
 
 @Service
 @RequiredArgsConstructor
