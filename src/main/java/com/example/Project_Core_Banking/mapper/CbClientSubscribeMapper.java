@@ -1,7 +1,9 @@
 package com.example.Project_Core_Banking.mapper;
 
+import com.example.Project_Core_Banking.dto.request.CommonReq;
 import com.example.Project_Core_Banking.dto.request.RegistrationReq;
-import com.example.Project_Core_Banking.entity.CbAccountProfit;
+import com.example.Project_Core_Banking.entity.CbClientSubscribe;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
@@ -27,7 +29,14 @@ public abstract class CbClientSubscribeMapper {
         return value.trim();
     }
 
-
+    protected String convertSubscribeDataToJson(RegistrationReq.SubscribeData subscribeData) {
+        if (subscribeData == null) return null;
+        try {
+            return objectMapper.writeValueAsString(subscribeData);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException("Error converting subscribeData to JSON", e);
+        }
+    }
 
     protected OffsetDateTime parseSubscribeDate(String dateStr) {
         if (dateStr == null) return null;
@@ -58,5 +67,5 @@ public abstract class CbClientSubscribeMapper {
             @Mapping(target = "createdBy", ignore = true),
             @Mapping(target = "createdWsId", ignore = true)
     })
-    public abstract CbAccountProfit toEntity(@NotNull @Valid RegistrationReq req);
+    public abstract CbClientSubscribe toEntity(CommonReq<RegistrationReq> req);
 }

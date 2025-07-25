@@ -10,6 +10,7 @@ import com.example.Project_Core_Banking.exception.DelegationServiceException;
 import com.example.Project_Core_Banking.infras.repository.CbHistoryRepo;
 import com.example.Project_Core_Banking.mapper.CbHistoryMapper;
 import com.example.Project_Core_Banking.service.CbHistoryService;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -21,12 +22,16 @@ import java.util.Objects;
 public class CbHistoryCardServicelmpl implements CbHistoryService {
     private final CbHistoryRepo cbHistoryRepo;
     private final CbHistoryMapper cbHistoryMapper;
+
+
+
+    @Transactional
     @Override
     public List<HistoryRes> history(CommonReq<HistoryReq> req) {
         HistoryReq data = req.getData();
         validRequest(data);
 
-        List<CbHistory> historyEntities = cbHistoryRepo.findAllByClientId(req.getData().clientId());
+        List<CbHistory> historyEntities = cbHistoryRepo.findAllByCbCardClient_ClientId(req.getData().clientId());
         if (historyEntities.isEmpty()) {
             throw new DelegationServiceException(
                     ResultCode.NO_CLIENT_ID.getCode(),
