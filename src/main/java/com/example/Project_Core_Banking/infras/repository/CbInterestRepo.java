@@ -8,4 +8,5 @@ import java.util.UUID;
 
 public interface CbInterestRepo extends JpaRepository<CbInterest, UUID> {
     Optional<CbInterest> findByInterestId(UUID interestId);
+    Optional<CbInterest> findByTerm(int term);
 }

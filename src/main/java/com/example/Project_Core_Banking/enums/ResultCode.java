@@ -24,7 +24,8 @@ public enum ResultCode implements IResultCode {
     NO_CLIENT_ID("ERR12", "Bạn nhập sai thông tin"),
     NOT_NULL("ERR11","Không được để trống"),
     ACCOUNT_ALREADY_REGISTERED("ERR13","Tài khoản %s đã được ghi nhận"),
-    NO_INTEREST_ID("ERR14","Không tìm thấy lãi suất");
+    NO_INTEREST_ID("ERR14","Không tìm thấy lãi suất"),
+    NO_TERM("ERR15","Không tìm thấy kỳ hạn theo quy định" );
 
     private String code;
     private String message;
