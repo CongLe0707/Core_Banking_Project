@@ -23,7 +23,8 @@ public enum ResultCode implements IResultCode {
     CHECK_PASS_CARD("ERR10", "Bạn nhập sai pass" ) ,
     NO_CLIENT_ID("ERR12", "Bạn nhập sai thông tin"),
     NOT_NULL("ERR11","Không được để trống"),
-    ACCOUNT_ALREADY_REGISTERED("ERR13","Tài khoản %s đã được ghi nhận");
+    ACCOUNT_ALREADY_REGISTERED("ERR13","Tài khoản %s đã được ghi nhận"),
+    NO_INTEREST_ID("ERR14","Không tìm thấy lãi suất");
 
     private String code;
     private String message;
