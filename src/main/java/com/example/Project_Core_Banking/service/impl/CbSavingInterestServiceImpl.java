@@ -16,22 +16,27 @@ import java.time.LocalDate;
 @Service
 @RequiredArgsConstructor
 public class CbSavingInterestServiceImpl implements CbSavingInterestService {
+
     private final CbInterestRepo cbInterestRepo;
+
     @Override
     public SavingInterestRes savingInterest(CommonReq<SavingInterestReq> req) {
+
         SavingInterestReq savingInterestReq = req.getData();
+
         CbInterest cbInterest = cbInterestRepo.findByTerm(savingInterestReq.term())
                 .orElseThrow(() -> new DelegationServiceException(
                     ResultCode.NO_TERM.getCode(),
                     ResultCode.NO_TERM.getMessage()
         ));
+        // Lấy dữ liệu
         double principal = savingInterestReq.principalAmount();
-        float interestRate = cbInterest.getInterest(); // từ DB
+        float interestRate = cbInterest.getInterest();
         int term = savingInterestReq.term() ;
         LocalDate startDate = savingInterestReq.startDate();
 
         // 2. Tính toán lãi
-        double interestAmount = principal * (interestRate / 100.0) * (term / 12.0);
+        double interestAmount = principal * interestRate * (term / 12.0);
         double totalAmount = principal + interestAmount;
         LocalDate maturityDate = startDate.plusMonths(term);
 
